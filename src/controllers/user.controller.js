@@ -102,12 +102,14 @@ const loginUser = asyncHandler(async (req, res) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production", 
     maxAge: 1 * 24 * 60 * 60 * 1000,
+ sameSite: "None", 
   };
 
   const options2 = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production", 
     maxAge: 10 * 24 * 60 * 60 * 1000,
+     sameSite: "None", 
   };
 
   res
